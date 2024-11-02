@@ -9,15 +9,14 @@
 - **Data Fetching with Bloc:** This app shows how to show stepper on e-commerce order placing.
   
    <a><img src="horizontal_preview.gif" width="350"></a>
-   
+
 
 ## File stracture
 
     ├── lib
     │   ├── main.dart
+    │   ├── stepper.dart
 
-
- <img src="demo/ . " width="50%" alt="Demo of this application" />
 
 ## Run Locally
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:developer' as devtools show log;
-import 'horizontal_stepper.dart';
+import 'stepper.dart';
 
 void main() {
   runApp(const MyApp());
