@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:developer' as devtools show log;
+import 'horizontal_stepper.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,55 +18,16 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  int currentStep = 0;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         useMaterial3: true,
       ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Horizontal Stepper'),
-        ),
-        body: Stepper(
-          type: StepperType.horizontal,
-          steps: getStepps(),
-          currentStep: currentStep,
-          onStepContinue: () {
-            final isLastStep = currentStep == getStepps().length - 1;
-            if (isLastStep) {
-              'Sending data to the server'.log();
-            } else {
-              setState(() => currentStep += 1);
-            }
-          },
-          onStepCancel: () {
-            currentStep == 0?null: setState(() => currentStep -= 1);
-          },
-        ),
-      ),
+      home: const HorizontalStepper(),
     );
   }
-
-  List<Step> getStepps() => [
-        Step(
-          isActive: currentStep >= 0,
-          title: const Text('Account'),
-          content: Container(),
-        ),
-        Step(
-          isActive: currentStep >= 1,
-          title: const Text('Address'),
-          content: Container(),
-        ),
-        Step(
-          isActive: currentStep >= 2,
-          title: const Text('Complete'),
-          content: Container(),
-        ),
-      ];
 }
