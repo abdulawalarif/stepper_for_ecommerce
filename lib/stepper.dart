@@ -67,18 +67,20 @@ class _HorizontalStepperState extends State<HorizontalStepper> {
                 final isLastStep = currentStep == getStepps().length - 1;
                 return Row(
                   children: [
-                    Button(
-                      onPressed: details.onStepContinue!,
-                      text: isLastStep ? 'Confirm' : 'Next',
-                    ),
-                    const SizedBox(
-                      width: 10,
-                    ),
+                  
+                   
                     if (currentStep != 0)
                       Button(
                         onPressed: details.onStepCancel!,
                         text: 'Back',
                       ),
+                       const SizedBox(
+                      width: 10,
+                    ),
+                        Button(
+                      onPressed: details.onStepContinue!,
+                      text: isLastStep ? 'Confirm' : 'Next',
+                    ),
                   ],
                 );
               },
