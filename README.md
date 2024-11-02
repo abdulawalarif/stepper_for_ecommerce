@@ -2,7 +2,6 @@
 
 ## A Flutter project implementing a horizontal stepper form UI for a multi-step form submission experience.
 
- 
 ## Features
 
 This project provides a clean and reusable horizontal stepper component for form inputs, perfect for applications needing a guided, multi-step form process. This codebase is only for the UI, and does not include backend integration. Features include:
@@ -11,11 +10,7 @@ This project provides a clean and reusable horizontal stepper component for form
 - Summary display at the end of the form.
 - Tick mark on each step completions.
 
-
-
-  
-   <a><img src="horizontal_preview.gif" width="350"></a>
-
+  <a><img src="horizontal_preview.gif" width="350"></a>
 
 ## File stracture
 
@@ -23,7 +18,6 @@ This project provides a clean and reusable horizontal stepper component for form
     │   ├── main.dart
     │   ├── stepper.dart
     │   ├── button.dart
-
 
 ## Run Locally
 
@@ -54,8 +48,6 @@ Connect a physical device or start a virtual device on your machine
 ## How to tweak this project for your own uses
 
 This horizontal stepper can serve as a foundation for multi-step forms in various applications. Customize each step’s fields, validation, and submission logic according to your requirements. You can also switch to a vertical stepper layout by modifying `StepperType.horizontal` to `StepperType.vertical`.
-
-
 
 ## Reporting Bugs or Requesting Features?
 
