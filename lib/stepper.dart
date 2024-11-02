@@ -14,7 +14,7 @@ class _HorizontalStepperState extends State<HorizontalStepper> {
   bool isCompleted = false;
   late TextEditingController firstNameController;
   late TextEditingController lastNameController;
-  late TextEditingController addreddController;
+  late TextEditingController addressController;
   late TextEditingController postCodeController;
 
   @override
@@ -22,19 +22,29 @@ class _HorizontalStepperState extends State<HorizontalStepper> {
     super.initState();
     firstNameController = TextEditingController();
     lastNameController = TextEditingController();
-    addreddController = TextEditingController();
+    addressController = TextEditingController();
     postCodeController = TextEditingController();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    firstNameController.dispose();
+    lastNameController.dispose();
+    addressController.dispose();
+    postCodeController.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Horizontal Stepper'),
+        title: const Text('Stepper'),
       ),
       body: isCompleted
           ? buildCompleted()
           : Stepper(
+              //If you want a vertical Stepper change this StepperType.horizontal to StepperType.horizontal
               type: StepperType.horizontal,
               steps: getStepps(),
               currentStep: currentStep,
@@ -131,7 +141,7 @@ class _HorizontalStepperState extends State<HorizontalStepper> {
                   controller: postCodeController,
                 ),
                 TextField(
-                  controller: addreddController,
+                  controller: addressController,
                 ),
               ],
             ),
@@ -189,7 +199,7 @@ class _HorizontalStepperState extends State<HorizontalStepper> {
                       width: 20,
                     ),
                     Text(
-                      addreddController.text.toString(),
+                      addressController.text.toString(),
                     ),
                   ],
                 ),
