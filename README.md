@@ -58,12 +58,9 @@ please submit an issue using the issues tab above. If you would like to submit a
 
 - Form validation for each step.
 - Animations between steps.
-- Error handling on form submission.
 
 ## Author
-
 - [@abdulawalarif](https://github.com/abdulawalarif)
 
 ## License
-
 The MIT License (MIT). Please view the [License](LICENSE) File for more information.
