@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:stepper_for_ecommerce/button.dart';
 import 'package:stepper_for_ecommerce/main.dart';
 
-class HorizontalStepper extends StatefulWidget {
-  const HorizontalStepper({super.key});
+class StepperForEcom extends StatefulWidget {
+  const StepperForEcom({super.key});
 
   @override
-  State<HorizontalStepper> createState() => _HorizontalStepperState();
+  State<StepperForEcom> createState() => _StepperForEcomState();
 }
 
-class _HorizontalStepperState extends State<HorizontalStepper> {
+class _StepperForEcomState extends State<StepperForEcom> {
   int currentStep = 0;
   bool isCompleted = false;
   late TextEditingController firstNameController;
@@ -53,6 +53,10 @@ class _HorizontalStepperState extends State<HorizontalStepper> {
                 final isLastStep = currentStep == getStepps().length - 1;
                 if (isLastStep) {
                   'Sending data to the server'.log();
+                  firstNameController.clear();
+                  lastNameController.clear();
+                  addressController.clear();
+                  postCodeController.clear();
                   setState(() {
                     isCompleted = true;
                   });
@@ -67,17 +71,15 @@ class _HorizontalStepperState extends State<HorizontalStepper> {
                 final isLastStep = currentStep == getStepps().length - 1;
                 return Row(
                   children: [
-                  
-                   
                     if (currentStep != 0)
                       Button(
                         onPressed: details.onStepCancel!,
                         text: 'Back',
                       ),
-                       const SizedBox(
+                    const SizedBox(
                       width: 10,
                     ),
-                        Button(
+                    Button(
                       onPressed: details.onStepContinue!,
                       text: isLastStep ? 'Confirm' : 'Next',
                     ),

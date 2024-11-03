@@ -27,7 +27,7 @@ class _MyAppState extends State<MyApp> {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         useMaterial3: true,
       ),
-      home: const HorizontalStepper(),
+      home: const StepperForEcom(),
     );
   }
 }
