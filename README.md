@@ -1,4 +1,4 @@
-# Stepper Widget | The Right Way | Multi-Step Forms Flutter Dart Project for Horizontal Stepper Form
+# Stepper Widget | The Right Way | Multi-Step Forms Flutter Dart Project Stepper Form
 
 ## A Flutter project implementing a horizontal stepper form UI for a multi-step form submission experience.
 
